@@ -1,0 +1,9 @@
+$kind: collection
+auth:
+  - id: 23edbef0-a2d5-4814-9705-d61dab21ef14
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: Token {{adminToken}}
+      key: Authorization
+order: 5000

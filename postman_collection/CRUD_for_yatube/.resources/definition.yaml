@@ -1,0 +1,13 @@
+$kind: collection
+description: ""
+variables:
+  userToken: ""
+  userUsername: ""
+  adminToken: ""
+  adminUsername: ""
+  group_id: ""
+  post_without_group: ""
+  post_with_group: ""
+  comment_id: ""
+  comment_id_for_permission_tests: ""
+  negative_test_post: ""

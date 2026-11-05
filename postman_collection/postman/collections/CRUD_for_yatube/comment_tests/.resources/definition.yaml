@@ -1,0 +1,9 @@
+$kind: collection
+auth:
+  - id: 669812d9-0fd4-44a6-ba9c-4a460387f43c
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: "{{auth_secret_0g3l}}"
+      key: Authorization
+order: 4000

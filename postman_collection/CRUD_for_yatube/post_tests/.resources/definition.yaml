@@ -1,0 +1,9 @@
+$kind: collection
+auth:
+  - id: e8a3ef82-f1dc-4229-bdb4-e1ef3479be4b
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: Token {{userToken}}
+      key: Authorization
+order: 3000

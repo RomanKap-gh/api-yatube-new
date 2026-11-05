@@ -1,0 +1,14 @@
+# Use this workspace to collaborate
+workspace:
+  id: 0f3a3f8a-4086-4da0-8522-03e98875e9c7
+
+localResources:
+  collections:
+    - ../CRUD_for_yatube
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/CRUD_for_yatube: 57ce53fb-3257-4cad-bc4c-8972efa18f00
+    ../CRUD_for_yatube: bb17d0a0-e44d-4a4e-8248-d121d7e1a7e5
