@@ -25,15 +25,18 @@ class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = ('title', 'id', 'slug', 'description')
+        fields = ('__all__')
         extra_kwargs = {
             'slug': {'required': True, 'allow_blank': False},
         }
 
 
 class PostSerializer(serializers.ModelSerializer):
-    author = serializers.StringRelatedField(
-        read_only=True, default=serializers.CurrentUserDefault())
+    author = serializers.SlugRelatedField(
+        slug_field='username',
+        read_only=True,
+        default=serializers.CurrentUserDefault()
+    )
 
     class Meta:
         fields = ('id', 'text', 'author', 'image', 'group', 'pub_date')
@@ -49,7 +52,10 @@ class PostSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     post = serializers.PrimaryKeyRelatedField(read_only=True)
-    author = serializers.StringRelatedField()
+    author = serializers.SlugRelatedField(
+        slug_field='username',
+        read_only=True
+    )
 
     class Meta:
         model = Comment
